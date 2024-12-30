@@ -113,12 +113,21 @@ iframe {
 
 .about, .products, .contact, .findus {
     padding: 50px 0;
-    text-align: center;
+    text-align:left;
     background-color: white;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.about h2, .products h2, .contact h2, .findus h2 {
+    text-align: center;
+}
+
+.findus p{
+    text-align: center;
+}
+
 
 .product-list {
     display: flex;
