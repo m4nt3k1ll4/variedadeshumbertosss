@@ -178,7 +178,6 @@ section{
 
 .products{
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./assets/pngwing.com\ \(8\).png')  center center/cover;
-    
 
 }
 
@@ -211,9 +210,17 @@ section{
     box-shadow: 20px 20px 5px black ;
     width: 20%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-background-color: #f9f9f9;
-    transition: all ease-in-out .4s;
+    background-color: #f9f9f9;
+    transition: transform ease-in-out .4s;
+    will-change: transform;
     
+}
+
+@media (hover: hover) {
+    .product-item:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
 }
 
 .product-item:hover{
