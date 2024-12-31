@@ -64,7 +64,7 @@ iframe {
 
 .hero {
     height: 70vh;
-    background: url('./assets/bgHeroImage.png')  center center/cover;
+    background: url('https://robertcastro.co/wp-content/uploads/2019/01/responsive-media-queries-CSS.jpg')  center center/cover;
     color: rgb(255, 255, 255);
     
     display: flex;
