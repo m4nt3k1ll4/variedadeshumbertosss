@@ -161,10 +161,6 @@ section{
     text-align: center;
 }
 
-.products{
-    background: url("./assets/moroccan-flower.png");
-}
-
 .products .container{
     display: flex;
     justify-content: center;
