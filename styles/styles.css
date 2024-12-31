@@ -171,6 +171,15 @@ section{
     text-align: center;
 }
 
+.findus .text{
+    display: flex;
+    gap: 3rem;
+}
+
+.findus .text .schedule{
+}
+
+
 .products .container{
     display: flex;
     justify-content: center;
