@@ -22,14 +22,20 @@ iframe {
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .header {
-    background-color: #11133ce7;
+    /* background-color: #11133ce7; */
+    width: 100%;
+    position: absolute;
     color: white;
     padding: 20px 0;
+    font-size: 1.1rem;
 }
 
 .nav {
@@ -49,7 +55,6 @@ iframe {
 .nav-list a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .nav-list a:hover {
@@ -58,10 +63,13 @@ iframe {
 
 
 .hero {
-    background: url('https://robertcastro.co/wp-content/uploads/2019/01/responsive-media-queries-CSS.jpg') no-repeat center center/cover;
+    height: 70vh;
+    background: url('./assets/bgHeroImage.png')  center center/cover;
     color: rgb(255, 255, 255);
-    padding: 100px 0;
-    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero h2 {
@@ -74,6 +82,11 @@ iframe {
     margin-bottom: 20px;
 }
 
+@media (max-width: 640px) { 
+    .hero {
+        text-align: center;
+    }
+}
 
 .btn, .btn-show, .btn-contact {
     display: inline-block;
@@ -81,69 +94,115 @@ iframe {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
     border: none;
     box-shadow: none;
 }
 
 .btn {
-    background-color: #0056b3;
+    background-color: #2169b6;
+    transition: all ease-in-out .5s;
 }
 
 .btn:hover {
-    background-color: #012d5b;
-}
-
-.btn-show {
-    background-color: #59e32f;
-}
-
-.btn-show:hover {
-    background-color: #0cb300;
-}
-
-.btn-contact {
-    background-color: #59e32f;
-}
-
-.btn-contact:hover {
-    background-color: #0cb300;
+    color: white;
+    background-color: #012144;
 }
 
 
 .about, .products, .contact, .findus {
     padding: 50px 0;
-    text-align:left;
+ 
     background-color: white;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.about h2, .products h2, .contact h2, .findus h2 {
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .container{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    padding-block: 3rem;
+}
+
+
+.about .container h2{
+    font-size: 2rem;
+}
+
+.about .container p{
+    width: 60%;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 640px) { 
+    .about .container{
+        flex-direction: column;
+
+    }
+
+    .about .container p{
+        font-size: 1rem;
+    }
+}
+
+.findus .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
     text-align: center;
 }
 
-.findus p{
-    text-align: center;
+.products{
+    background: url("./assets/moroccan-flower.png");
 }
 
+.products .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap:2rem
+}
+
+.products .container h2{
+    font-size: 2rem;
+    color: #012144;
+}
 
 .product-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 20px;
+    gap: 5rem;
 }
 
 .product-item {
-    background-color: #f1f1f1;
-    padding: 20px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    width: 300px;
+    box-shadow: 20px 20px 5px black ;
+    width: 27%;
     margin: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+background-color: #f9f9f9;
+    transition: all ease-in-out .4s;
+    
+}
+
+.product-item:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .product-item img {
@@ -152,42 +211,56 @@ iframe {
     border-radius: 5px;
 }
 
+.product-text{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    background: #d2daff;
+    padding: 1.5rem;
+}
+
+
+@media (max-width: 640px) { 
+    
+    .product-list{
+        gap: 1rem;
+    }
+    
+    .product-item {
+        width: 100%;
+    }
+}
+
+
 .container-contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
     width: 100%;
-    margin: 0 auto;
 }
 
 .contact-title {
-    text-align: center;
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .contact-icons {
     display: flex;
-    justify-content: center;
     gap: 15px;
 }
 
-.contact-icons img {
-    width: 60px;
-    height: auto;
-    margin: 0;
-    display: block;
+.contact-icons a svg{
+    width: 30px;
 }
-
 
 .footer {
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 20%;
 }
 
 .gitlink a {
@@ -197,4 +270,23 @@ iframe {
 
 .gitlink a:visited {
     color: white;
+}
+
+.footer .container{
+    gap: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 640px) { 
+    
+    .footer {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .contact-icons{
+        justify-content: center;
+    }
 }
