@@ -86,6 +86,14 @@ iframe {
     .hero {
         text-align: center;
     }
+
+    .hero h2{
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
 }
 
 .btn, .btn-show, .btn-contact {
@@ -144,11 +152,13 @@ section{
 @media (max-width: 640px) { 
     .about .container{
         flex-direction: column;
-
+        padding-block: 1rem;
+        gap: 2rem;
     }
 
     .about .container p{
-        font-size: 1rem;
+        width: 80%;
+        font-size: .9rem;
     }
 }
 
