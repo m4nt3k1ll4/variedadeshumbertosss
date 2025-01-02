@@ -62,13 +62,37 @@ iframe {
 
 
 .hero {
+    position: relative;
     height: 70vh;
-    background: url('https://robertcastro.co/wp-content/uploads/2019/01/responsive-media-queries-CSS.jpg') center center/cover;
     color: rgb(255, 255, 255);
-
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%; 
+    height: 110%; 
+    background: url('./assets/hero.jpeg') center center/cover;
+    filter: blur(4px);
+    z-index: -1; 
+    transform: translate(-5%, -5%); 
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
 }
 
 .hero h2 {
@@ -79,6 +103,11 @@ iframe {
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+}
+
+.hero img{
+    width: 340px;
+    height:160px;
 }
 
 @media (max-width: 640px) {
@@ -108,7 +137,7 @@ iframe {
 }
 
 .btn {
-    background-color: #2169b6;
+    background-color: #ff0000;
     transition: all ease-in-out .5s;
 }
 
@@ -123,10 +152,9 @@ iframe {
 .contact,
 .findus {
     padding: 50px 0;
-
     background-color: white;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -137,6 +165,7 @@ section {
 }
 
 .about .container {
+    border-radius: 0 0 15px 15px;
     display: flex;
     flex-direction: row;
     gap: 5rem;
@@ -186,6 +215,7 @@ section {
 }
 
 .products .container {
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,7 +225,7 @@ section {
 
 .products .container h2 {
     font-size: 2rem;
-    color: #012144;
+    color: #000000;
 }
 
 .product-list {
@@ -244,7 +274,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: .8rem;
-    background: #d2daff;
+    background: #fce3e6;
     padding: 1.5rem;
     border-radius: 0 0 10px 10px;
 }
