@@ -68,6 +68,7 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     overflow: hidden;
 }
 
@@ -93,6 +94,9 @@ iframe {
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     z-index: -1;
+=======
+    text-align: center;
+>>>>>>> 768c41d3b94178ec0d7614fa471afec63090e97c
 }
 
 .hero h2 {
