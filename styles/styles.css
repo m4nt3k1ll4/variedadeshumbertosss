@@ -29,12 +29,12 @@ iframe {
 
 
 .header {
-    /* background-color: #11133ce7; */
     width: 100%;
     position: absolute;
     color: white;
     padding: 20px 0;
     font-size: 1.1rem;
+    z-index: 1;
 }
 
 .nav {
